@@ -1,0 +1,12 @@
+id,patient_id,allergy_start,allergy_stop,description
+1038,c7bf803b-fdd7-4fbe-8736-fb2c8ed5fbd3,1988-05-16,,Allergy to eggs
+1046,47c0e21b-baf2-4558-b535-5de33cc0477a,1978-03-05,,Allergy to grass pollen
+1221,8b542900-69a7-4f1f-9420-edefecda9cdf,1980-09-24,1993-07-08,Allergy to mould
+1226,8b542900-69a7-4f1f-9420-edefecda9cdf,1980-09-24,1993-07-08,Allergy to grass pollen
+1236,8b542900-69a7-4f1f-9420-edefecda9cdf,1980-09-24,1993-07-08,Dander (animal) allergy
+1241,8b542900-69a7-4f1f-9420-edefecda9cdf,1980-09-24,1993-07-08,House dust mite allergy
+1248,c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,1953-08-17,,Allergy to fish
+1250,fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,1995-08-08,,Allergy to mould
+1253,fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,1995-08-08,,Allergy to grass pollen
+1258,fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,1995-08-08,2011-11-29,Allergy to dairy product
+1262,fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,1995-08-08,,Dander (animal) allergy
