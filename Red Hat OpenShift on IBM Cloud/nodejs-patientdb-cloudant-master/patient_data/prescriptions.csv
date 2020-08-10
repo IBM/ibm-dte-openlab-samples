@@ -1,0 +1,273 @@
+id,medication_id,drug_name,patient_id,reason
+31164,562251,"Amoxicillin ",c7bf803b-fdd7-4fbe-8736-fb2c8ed5fbd3,"Viral sinusitis (disorder)"
+31166,308182,"Amoxicillin ",87cefb4d-702c-4ba4-9a93-208e41d5d6d4,
+31171,309045,"Cefaclor ",ef5335dd-db17-491e-8150-20ce24712b06,
+31176,308182,"Amoxicillin ",ef5335dd-db17-491e-8150-20ce24712b06,
+31180,834061,"Penicillin V Potassium ",87cefb4d-702c-4ba4-9a93-208e41d5d6d4,"Streptococcal sore throat (disorder)"
+31188,312617,"predniSONE ",c7bf803b-fdd7-4fbe-8736-fb2c8ed5fbd3,
+31189,834061,"Penicillin V Potassium ",87cefb4d-702c-4ba4-9a93-208e41d5d6d4,"Streptococcal sore throat (disorder)"
+31190,313782,"Acetaminophen ",87cefb4d-702c-4ba4-9a93-208e41d5d6d4,"Acute bronchitis (disorder)"
+31196,849574,"Naproxen sodium ",c7bf803b-fdd7-4fbe-8736-fb2c8ed5fbd3,
+31200,562251,"Amoxicillin ",87cefb4d-702c-4ba4-9a93-208e41d5d6d4,"Viral sinusitis (disorder)"
+31210,198405,"Ibuprofen ",ef5335dd-db17-491e-8150-20ce24712b06,
+31212,313782,"Acetaminophen ",c7bf803b-fdd7-4fbe-8736-fb2c8ed5fbd3,"Acute bronchitis (disorder)"
+31222,198405,"Ibuprofen ",87cefb4d-702c-4ba4-9a93-208e41d5d6d4,
+31224,198405,"Ibuprofen ",ef5335dd-db17-491e-8150-20ce24712b06,
+31228,197378,"Astemizole ",c7bf803b-fdd7-4fbe-8736-fb2c8ed5fbd3,
+31240,1870230," ",c7bf803b-fdd7-4fbe-8736-fb2c8ed5fbd3,
+31243,313782,"Acetaminophen ",c7bf803b-fdd7-4fbe-8736-fb2c8ed5fbd3,"Acute bronchitis (disorder)"
+31256,313782,"Acetaminophen ",87cefb4d-702c-4ba4-9a93-208e41d5d6d4,"Acute bronchitis (disorder)"
+31264,310965,"Ibuprofen ",ef5335dd-db17-491e-8150-20ce24712b06,
+31284,198405,"Ibuprofen ",ef5335dd-db17-491e-8150-20ce24712b06,
+31299,751905,"Trinessa ",ef5335dd-db17-491e-8150-20ce24712b06,
+31322,807283,"Mirena ",ef5335dd-db17-491e-8150-20ce24712b06,
+31354,849574,"Naproxen sodium ",ef5335dd-db17-491e-8150-20ce24712b06,
+31772,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31775,1860154,"Abuse-Deterrent ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31783,1310197,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31799,243670,"Aspirin ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31801,235389,"Mestranol / Norethynodrel [Enovid]",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31805,235389,"Mestranol / Norethynodrel [Enovid]",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31812,1310197,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31815,106258,"Hydrocortisone ",47c0e21b-baf2-4558-b535-5de33cc0477a,"Contact dermatitis"
+31816,235389,"Mestranol / Norethynodrel [Enovid]",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31817,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31822,310325,"ferrous sulfate ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31831,243670,"Aspirin ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31836,235389,"Mestranol / Norethynodrel [Enovid]",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31837,1363309,"Chlorpheniramine Maleate ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31841,1094107,"Phenazopyridine hydrochloride ",47c0e21b-baf2-4558-b535-5de33cc0477a,"Escherichia coli urinary tract infection"
+31844,311989,"Nitrofurantoin ",47c0e21b-baf2-4558-b535-5de33cc0477a,"Escherichia coli urinary tract infection"
+31849,1860154,"Abuse-Deterrent ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31853,105078,"Penicillin G ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31854,235389,"Mestranol / Norethynodrel [Enovid]",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31858,1310197,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31862,1310197,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31864,749785,"Ortho Tri-Cyclen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31866,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31867,1000126," medroxyprogesterone acetate",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31868,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31869,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31870,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31872,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31873,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31874,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31876,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31877,749882,"Norinyl ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31880,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31883,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31884,389221,"Etonogestrel ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31885,1359133,"Estrostep Fe ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31887,749785,"Ortho Tri-Cyclen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31890,1860154,"Abuse-Deterrent ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31893,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31895,749785,"Ortho Tri-Cyclen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31899,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31901,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31902,1860154,"Abuse-Deterrent ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31903,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31904,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31905,1860154,"Abuse-Deterrent ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31906,1310197,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31907,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31912,748856,"Yaz ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31914,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31916,749882,"Norinyl ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31918,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31921,1860154,"Abuse-Deterrent ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31928,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31931,1310197,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31932,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31934,1310197,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31935,1043400,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,"Acute bronchitis (disorder)"
+31936,1310197,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31938,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31939,1310197,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31940,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31941,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31944,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31945,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31947,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31948,757594,"Jolivette ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31949,1310197,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31950,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31951,316672,"Simvistatin ",47c0e21b-baf2-4558-b535-5de33cc0477a,Hyperlipidemia
+31952,1860154,"Abuse-Deterrent ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31957,1860154,"Abuse-Deterrent ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+31958,1049221,"Acetaminophen ",47c0e21b-baf2-4558-b535-5de33cc0477a,
+32061,311989,"Nitrofurantoin ",716d85fe-421b-4afb-b061-7f3026734a72,Cystitis
+32069,310965,"Ibuprofen ",716d85fe-421b-4afb-b061-7f3026734a72,
+32073,235389,"Mestranol / Norethynodrel [Enovid]",716d85fe-421b-4afb-b061-7f3026734a72,
+32074,311995,"NITROFURANTOIN  MACROCRYSTALS ",716d85fe-421b-4afb-b061-7f3026734a72,Cystitis
+32077,749785,"Ortho Tri-Cyclen ",716d85fe-421b-4afb-b061-7f3026734a72,
+32081,311989,"Nitrofurantoin ",716d85fe-421b-4afb-b061-7f3026734a72,Cystitis
+32101,313782,"Acetaminophen ",716d85fe-421b-4afb-b061-7f3026734a72,"Acute bronchitis (disorder)"
+32104,235389,"Mestranol / Norethynodrel [Enovid]",716d85fe-421b-4afb-b061-7f3026734a72,
+32107,235389,"Mestranol / Norethynodrel [Enovid]",716d85fe-421b-4afb-b061-7f3026734a72,
+32110,1094107,"Phenazopyridine hydrochloride ",716d85fe-421b-4afb-b061-7f3026734a72,Cystitis
+32115,313782,"Acetaminophen ",716d85fe-421b-4afb-b061-7f3026734a72,
+32116,313782,"Acetaminophen ",716d85fe-421b-4afb-b061-7f3026734a72,"Acute bronchitis (disorder)"
+32117,310965,"Ibuprofen ",716d85fe-421b-4afb-b061-7f3026734a72,
+32120,749785,"Ortho Tri-Cyclen ",716d85fe-421b-4afb-b061-7f3026734a72,
+32122,834102,"Penicillin V Potassium ",716d85fe-421b-4afb-b061-7f3026734a72,"Streptococcal sore throat (disorder)"
+32126,313782,"Acetaminophen ",716d85fe-421b-4afb-b061-7f3026734a72,"Acute bronchitis (disorder)"
+32147,235389,"Mestranol / Norethynodrel [Enovid]",716d85fe-421b-4afb-b061-7f3026734a72,
+32148,1094107,"Phenazopyridine hydrochloride ",716d85fe-421b-4afb-b061-7f3026734a72,Cystitis
+32158,749882,"Norinyl ",716d85fe-421b-4afb-b061-7f3026734a72,
+32493,562251,"Amoxicillin ",0f134891-414c-46dc-9291-836eb3765c02,"Viral sinusitis (disorder)"
+32499,313782,"Acetaminophen ",0f134891-414c-46dc-9291-836eb3765c02,"Acute bronchitis (disorder)"
+32527,198405,"Ibuprofen ",0f134891-414c-46dc-9291-836eb3765c02,
+32534,1043400,"Acetaminophen ",0f134891-414c-46dc-9291-836eb3765c02,"Acute bronchitis (disorder)"
+32560,746030,"Atenolol ",0f134891-414c-46dc-9291-836eb3765c02,Hypertension
+32563,310965,"Ibuprofen ",0f134891-414c-46dc-9291-836eb3765c02,
+32589,849574,"Naproxen sodium ",0f134891-414c-46dc-9291-836eb3765c02,
+32591,313782,"Acetaminophen ",0f134891-414c-46dc-9291-836eb3765c02,"Acute bronchitis (disorder)"
+32604,999969,"Amlodipine ",0f134891-414c-46dc-9291-836eb3765c02,Hypertension
+32612,316049,"Hydrochlorothiazide ",0f134891-414c-46dc-9291-836eb3765c02,Hypertension
+36033,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36034,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36036,1049221,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36037,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36039,243670,"Aspirin ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36040,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36041,1736776," oxaliplatin",302884bf-8bf4-4943-8b34-e223012a92e9,"Malignant tumor of colon"
+36042,310965,"Ibuprofen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36044,1043400,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,"Acute bronchitis (disorder)"
+36045,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36046,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36047,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36049,1049221,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36050,1094107,"Phenazopyridine hydrochloride ",302884bf-8bf4-4943-8b34-e223012a92e9,"Escherichia coli urinary tract infection"
+36051,1310197,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36054,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36056,1049221,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36057,106892,"insulin human  isophane ",302884bf-8bf4-4943-8b34-e223012a92e9,Diabetes
+36058,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36059,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36060,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36061,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36062,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36063,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36064,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36066,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36069,1310197,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36070,1310197,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36071,2119714," hyaluronidase-oysk",302884bf-8bf4-4943-8b34-e223012a92e9,"Malignant neoplasm of breast (disorder)"
+36072,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36073,313782,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36074,1803932,"Leucovorin ",302884bf-8bf4-4943-8b34-e223012a92e9,"Malignant tumor of colon"
+36076,243670,"Aspirin ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36078,313782,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,"Acute bronchitis (disorder)"
+36079,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36082,313782,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,"Acute bronchitis (disorder)"
+36083,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36084,313782,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36085,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36086,904419,"Alendronic acid ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36087,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36088,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36089,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36090,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36091,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36092,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36093,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36094,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36097,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36098,313782,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,"Acute bronchitis (disorder)"
+36100,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36103,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36104,562251,"Amoxicillin ",302884bf-8bf4-4943-8b34-e223012a92e9,"Viral sinusitis (disorder)"
+36105,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36107,313782,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,"Acute bronchitis (disorder)"
+36109,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36110,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36111,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36112,243670,"Aspirin ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36113,1049221,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36114,105078,"Penicillin G ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36115,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36119,310965,"Ibuprofen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36120,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36121,1860154,"Abuse-Deterrent ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36122,1310197,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36124,1049221,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36125,313782,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,"Acute bronchitis (disorder)"
+36127,316672,"Simvistatin ",302884bf-8bf4-4943-8b34-e223012a92e9,Hyperlipidemia
+36128,243670,"Aspirin ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36129,1049221,"Acetaminophen ",302884bf-8bf4-4943-8b34-e223012a92e9,
+36130,311989,"Nitrofurantoin ",302884bf-8bf4-4943-8b34-e223012a92e9,"Escherichia coli urinary tract infection"
+36131,200064,"letrozole ",302884bf-8bf4-4943-8b34-e223012a92e9,"Malignant neoplasm of breast (disorder)"
+38395,749762,"Seasonique ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38398,749785,"Ortho Tri-Cyclen ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38405,313782,"Acetaminophen ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38409,243670,"Aspirin ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38413,834102,"Penicillin V Potassium ",8b542900-69a7-4f1f-9420-edefecda9cdf,"Streptococcal sore throat (disorder)"
+38423,749785,"Ortho Tri-Cyclen ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38427,313782,"Acetaminophen ",8b542900-69a7-4f1f-9420-edefecda9cdf,"Acute bronchitis (disorder)"
+38434,1366343,"Levonorgestrel ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38439,310965,"Ibuprofen ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38443,834061,"Penicillin V Potassium ",8b542900-69a7-4f1f-9420-edefecda9cdf,"Streptococcal sore throat (disorder)"
+38445,751905,"Trinessa ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38448,308182,"Amoxicillin ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38452,1359133,"Estrostep Fe ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38455,749785,"Ortho Tri-Cyclen ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38456,789980,"Ampicillin ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38459,313782,"Acetaminophen ",8b542900-69a7-4f1f-9420-edefecda9cdf,"Acute bronchitis (disorder)"
+38461,834061,"Penicillin V Potassium ",8b542900-69a7-4f1f-9420-edefecda9cdf,"Streptococcal sore throat (disorder)"
+38462,562251,"Amoxicillin ",8b542900-69a7-4f1f-9420-edefecda9cdf,"Viral sinusitis (disorder)"
+38465,562251,"Amoxicillin ",8b542900-69a7-4f1f-9420-edefecda9cdf,"Acute bacterial sinusitis (disorder)"
+38471,562251,"Amoxicillin ",8b542900-69a7-4f1f-9420-edefecda9cdf,"Viral sinusitis (disorder)"
+38472,313782,"Acetaminophen ",8b542900-69a7-4f1f-9420-edefecda9cdf,"Acute bronchitis (disorder)"
+38474,1366343,"Levonorgestrel ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38477,282464,"Acetaminophen ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38480,477045,"Chlorpheniramine Maleate ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38481,243670,"Aspirin ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38486,749762,"Seasonique ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38487,310325,"ferrous sulfate ",8b542900-69a7-4f1f-9420-edefecda9cdf,
+38488,834102,"Penicillin V Potassium ",8b542900-69a7-4f1f-9420-edefecda9cdf,"Streptococcal sore throat (disorder)"
+40774,313782,"Acetaminophen ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,"Acute bronchitis (disorder)"
+40781,106258,"Hydrocortisone ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,"Atopic dermatitis"
+40782,895994," Fluticasone propionate",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,"Childhood asthma"
+40787,749762,"Seasonique ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,
+40788,235389,"Mestranol / Norethynodrel [Enovid]",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40793,235389,"Mestranol / Norethynodrel [Enovid]",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40794,282464,"Acetaminophen ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40797,746030,"Atenolol ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,Hypertension
+40798,235389,"Mestranol / Norethynodrel [Enovid]",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40800,745679," Albuterol",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,"Childhood asthma"
+40806,835900,"cycloSPORINE ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,"Atopic dermatitis"
+40807,316049,"Hydrochlorothiazide ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,Hypertension
+40808,1650142,"Doxycycline Monohydrate ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40821,748879,"Levora ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,
+40822,198405,"Ibuprofen ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,
+40823,1043400,"Acetaminophen ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,"Acute bronchitis (disorder)"
+40825,1870230," ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,
+40829,749762,"Seasonique ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,
+40834,1049630,"diphenhydrAMINE Hydrochloride ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,
+40847,751905,"Trinessa ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,
+40851,1043400,"Acetaminophen ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,"Acute bronchitis (disorder)"
+40856,235389,"Mestranol / Norethynodrel [Enovid]",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40857,834061,"Penicillin V Potassium ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,"Streptococcal sore throat (disorder)"
+40859,106258,"Hydrocortisone ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,"Atopic dermatitis"
+40860,308182,"Amoxicillin ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,
+40862,243670,"Aspirin ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40865,562251,"Amoxicillin ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,"Viral sinusitis (disorder)"
+40866,106258,"Hydrocortisone ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,"Atopic dermatitis"
+40867,198405,"Ibuprofen ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,
+40870,313782,"Acetaminophen ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,"Acute bronchitis (disorder)"
+40873,282464,"Acetaminophen ",fa19492e-c4d6-49e7-93b0-92ee3fc52a7f,
+40881,1366343,"Levonorgestrel ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40892,849574,"Naproxen sodium ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40893,749882,"Norinyl ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40900,749785,"Ortho Tri-Cyclen ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40903,749882,"Norinyl ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40907,1366343,"Levonorgestrel ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40911,749882,"Norinyl ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40918,562251,"Amoxicillin ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,"Viral sinusitis (disorder)"
+40926,1359133,"Estrostep Fe ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40952,1043400,"Acetaminophen ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,"Acute bronchitis (disorder)"
+40955,749882,"Norinyl ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40961,1359133,"Estrostep Fe ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40966,749882,"Norinyl ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40968,749882,"Norinyl ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
+40969,749882,"Norinyl ",c660eeb2-020c-4598-8e9f-fd3c57f3e7b9,
