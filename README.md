@@ -1,2 +1,5 @@
-# ibm-dte-openlab-samples
-Repositoy for IBM DTE OpenLabs samples
+Sample code repository for **IBM Open Labs - gm4c-appmod** labs.
+
+Contributors:
+
+Jermaine Edwards (jedward2@us.ibm.com)
