@@ -13,7 +13,7 @@ installAWSCLI () {
 	echo "Installing AWS CLI"
 	./aws/install -i awsbin
 	echo "Adding AWS CLI to PATH environment variable"
-	export PATH=$PATH:$HOME/awsbin/v2/2.3.2/bin
+
 }
 
 configureAWSCLI () {
@@ -59,6 +59,9 @@ then
 else
 	echo "Skipping AWS CLI install"
 fi
+
+#need to assume we installed it, will need to update if versions change
+export PATH=$PATH:$HOME/awsbin/v2/2.3.2/bin
 
 echo "Do you want to configure the AWS CLI (y|n)?"; read ans
 if [[ "$ans" == "y" || "$ans" == "Y" ]]
