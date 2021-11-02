@@ -1,6 +1,5 @@
 #!/bin/bash
-# in github @ https://raw.githubusercontent.com/IBM/ibm-dte-openlab-samples/42fb44d3eb73289cdc20ab2f866ed81557dae74e/satellite/satelliteSwapIPs.bash
-# wget https://raw.githubusercontent.com/IBM/ibm-dte-openlab-samples/42fb44d3eb73289cdc20ab2f866ed81557dae74e/satellite/satelliteSwapIPs.bash
+# wget https://raw.githubusercontent.com/IBM/ibm-dte-openlab-samples/master/satellite/satelliteSwapIPs.bash
 
 origIFS=$IFS
 
