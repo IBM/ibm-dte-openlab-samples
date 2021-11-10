@@ -138,7 +138,7 @@ function valid_ip()
 {
     local  ip=$1
     local  stat=1
-echo "valid_ip $ip"
+# echo "valid_ip $ip"
 
     if [[ $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
         OIFS=$IFS
@@ -149,7 +149,7 @@ echo "valid_ip $ip"
             && ${ip[2]} -le 255 && ${ip[3]} -le 255 ]]
         stat=$?
     fi
-echo "valid_ip stat = $stat"
+# echo "valid_ip stat = $stat"
     return $stat
 }
 
@@ -254,9 +254,9 @@ echo publicControlPlaneIPS = $publicControlPlaneIPS
 
 for i in $publicControlPlaneIPS
 do
-	echo validating IP - $i
+	# echo validating IP - $i
 	valid_ip $i || {
-		echo "$i does not appear to be a valid IP address... you should probably skip the next step."
+		echo "$i does not appear to be a valid IP address... you should probably skip the next step!"
 	}
 done
 
@@ -301,9 +301,9 @@ echo publicWorkerNodeIPS = $publicWorkerNodeIPS
 
 for i in $publicWorkerNodeIPS
 do
-	echo validating IP - $i
+	# echo validating IP - $i
 	valid_ip $i || {
-		echo "$i does not appear to be a valid IP address... you should probably skip the next step."
+		echo "$i does not appear to be a valid IP address... you should probably skip the next 2 steps!"
 	}
 done
 
