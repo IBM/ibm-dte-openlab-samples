@@ -138,6 +138,7 @@ function valid_ip()
 {
     local  ip=$1
     local  stat=1
+echo "valid_ip $ip"
 
     if [[ $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
         OIFS=$IFS
@@ -148,6 +149,7 @@ function valid_ip()
             && ${ip[2]} -le 255 && ${ip[3]} -le 255 ]]
         stat=$?
     fi
+echo "valid_ip stat = $stat"
     return $stat
 }
 
