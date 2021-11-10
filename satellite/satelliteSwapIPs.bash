@@ -255,7 +255,9 @@ echo publicControlPlaneIPS = $publicControlPlaneIPS
 for i in $publicControlPlaneIPS
 do
 	echo validating IP - $i
-	if valid_ip $i; then echo "$i is a valid IP"; else stat='$i is not a valid IP'; fi
+	valid_ip $i || {
+		echo "$i does not appear to be a valid IP address... you should probably skip the next step."
+	}
 done
 
 # set -- $publicControlPlaneIPS
@@ -300,7 +302,9 @@ echo publicWorkerNodeIPS = $publicWorkerNodeIPS
 for i in $publicWorkerNodeIPS
 do
 	echo validating IP - $i
-	if valid_ip $i; then echo "$i is a valid IP"; else stat='$i is not a valid IP'; fi
+	valid_ip $i || {
+		echo "$i does not appear to be a valid IP address... you should probably skip the next step."
+	}
 done
 
 echo
