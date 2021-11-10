@@ -126,6 +126,30 @@ cleanup() {
 	rm $AWS_DESCRIBE_INSTANCES || echo "Unable to remove temporary file: $AWS_DESCRIBE_INSTANCES"
 }
 
+#---------------------------------------------------------------------------------------------
+# Test an IP address for validity:
+# Usage:
+#      valid_ip IP_ADDRESS
+#      if [[ $? -eq 0 ]]; then echo good; else echo bad; fi
+#   OR
+#      if valid_ip IP_ADDRESS; then echo good; else echo bad; fi
+#---------------------------------------------------------------------------------------------
+function valid_ip()
+{
+    local  ip=$1
+    local  stat=1
+
+    if [[ $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
+        OIFS=$IFS
+        IFS='.'
+        ip=($ip)
+        IFS=$OIFS
+        [[ ${ip[0]} -le 255 && ${ip[1]} -le 255 \
+            && ${ip[2]} -le 255 && ${ip[3]} -le 255 ]]
+        stat=$?
+    fi
+    return $stat
+}
 
 #---------------------------------------------------------------------------------------------
 # prompt utility
@@ -170,6 +194,7 @@ echo "Adding AWS CLI to PATH environment variable"
 export PATH=$PATH:$BIN
 
 # configure AWS CLI
+echo
 yesno "Do you want to configure the AWS CLI (y|n)? " && configureAWSCLI || echo "Skipping AWS CLI configuration."
 
 
@@ -225,8 +250,14 @@ do
 done
 echo publicControlPlaneIPS = $publicControlPlaneIPS
 
+for i in $publicControlPlaneIPS
+do
+	if valid_ip $ip; then echo "$i is a valid IP"; else stat='$i is not a valid IP'; fi
+done
+
 # set -- $publicControlPlaneIPS
 
+echo
 # add public IPs to DNS for Satellite Control Plane
 yesno "Do you want to add public IPS to DNS for control plane (y|n)? " && addPublicIPs4CP $publicControlPlaneIPS || echo "Skipping add of Public IPs to DNS for control plane."
 
@@ -262,6 +293,12 @@ do
 	#echo $publicControlPlaneIPS
 done
 echo publicWorkerNodeIPS = $publicWorkerNodeIPS
+
+for i in $publicWorkerNodeIPS
+do
+	if valid_ip $ip; then echo "$i is a valid IP"; else stat='$i is not a valid IP'; fi
+done
+
 echo
 
 # add public IPs for worker nodes to OpenShift Cluster
