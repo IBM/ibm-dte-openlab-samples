@@ -1,9 +1,16 @@
 #!/bin/bash
+# 
+# to get the lastest version of this script run the following command
 # wget https://raw.githubusercontent.com/IBM/ibm-dte-openlab-samples/master/satellite/satelliteSwapIPs.bash
+# chmod +x ./satelliteSwapIPS.bash
+#
+
+
 
 # move to home directory if not already there
 cd $HOME
 
+# some variables we will need
 export origIFS=$IFS
 export AWSREGION="us-east-2"
 export AWS_INSTALL="$HOME/awsinstall"        # directory for binary
@@ -46,6 +53,7 @@ configureAWSCLI () {
 	echo "When prompted for region enter $AWSREGION or the appropriate region for your Satellite Location."
 	echo "When prompted for output format enter \"text\"."
 	echo "Running aws configure"
+	echo ""
 	aws configure
 }
 
@@ -55,12 +63,18 @@ configureAWSCLI () {
 #---------------------------------------------------------------------------------------------
 addPublicIPs4CP () {
 	# add public IPs to Satellite Location configuration for control plane
-
+	
+	# build list string for command based upon arguements passed in
+	params=""
+	
+	for i in "$@"
+	do
+		params="$params --ip $i "
+	done
 	echo "Updating location subdomain DNS records for control plane"
-	ibmcloud sat location dns register --location $location --ip $PIP1 --ip $PIP2 --ip $PIP3  || {
-		echo "Error trying to set DNS IPS for contol plane"
-		exit 1
-	}
+	ibmcloud sat location dns register --location $location $params
+
+
 }
 
 #---------------------------------------------------------------------------------------------
@@ -70,12 +84,19 @@ addPublicIPs4CP () {
 #---------------------------------------------------------------------------------------------
 addPublicIPs4Workers () {
 	# add public IPs to Satellite Location configuration for worker nodes
+		# build list string for command based upon arguements passed in
 	
 	echo "Updating cluster IPs for worker nodes"
-	ibmcloud oc nlb-dns add --ip $clusterPIP1 --cluster $clusterName --nlb-host $clusterHostname
-	ibmcloud oc nlb-dns add --ip $clusterPIP2 --cluster $clusterName --nlb-host $clusterHostname
-	ibmcloud oc nlb-dns add --ip $clusterPIP3 --cluster $clusterName --nlb-host $clusterHostname
-
+	for i in "$@"
+	do
+		ibmcloud oc nlb-dns add --ip $i --cluster $clusterName --nlb-host $clusterHostname
+		#echo ibmcloud oc nlb-dns add --ip $i --cluster $clusterName --nlb-host $clusterHostname
+	done
+	
+# 		ibmcloud oc nlb-dns add --ip $clusterPIP1 --cluster $clusterName --nlb-host $clusterHostname
+# 		ibmcloud oc nlb-dns add --ip $clusterPIP2 --cluster $clusterName --nlb-host $clusterHostname
+# 		ibmcloud oc nlb-dns add --ip $clusterPIP3 --cluster $clusterName --nlb-host $clusterHostname
+	
 }
 
 #---------------------------------------------------------------------------------------------
@@ -85,10 +106,26 @@ addPublicIPs4Workers () {
 #---------------------------------------------------------------------------------------------
 removePrivateIPs4Workers() {
 	echo "Removing private IPs from NLB"
-	ibmcloud oc nlb-dns rm classic --ip $clusterIP1 --cluster $clusterName --nlb-host $clusterHostname
-	ibmcloud oc nlb-dns rm classic --ip $clusterIP2 --cluster $clusterName --nlb-host $clusterHostname
-	ibmcloud oc nlb-dns rm classic --ip $clusterIP3 --cluster $clusterName --nlb-host $clusterHostname
+	for i in "$@"
+	do
+		# echo ibmcloud oc nlb-dns rm classic --ip $i --cluster $clusterName --nlb-host $clusterHostname
+		ibmcloud oc nlb-dns rm classic --ip $i --cluster $clusterName --nlb-host $clusterHostname
+	done
+	# ibmcloud oc nlb-dns rm classic --ip $clusterIP1 --cluster $clusterName --nlb-host $clusterHostname
+	# ibmcloud oc nlb-dns rm classic --ip $clusterIP2 --cluster $clusterName --nlb-host $clusterHostname
+	# ibmcloud oc nlb-dns rm classic --ip $clusterIP3 --cluster $clusterName --nlb-host $clusterHostname
 }
+
+#---------------------------------------------------------------------------------------------
+# cleanup temporary files
+# 
+#---------------------------------------------------------------------------------------------
+
+
+cleanup() {
+	rm $AWS_DESCRIBE_INSTANCES || echo "Unable to remove temporary file: $AWS_DESCRIBE_INSTANCES"
+}
+
 
 #---------------------------------------------------------------------------------------------
 # prompt utility
@@ -98,7 +135,7 @@ removePrivateIPs4Workers() {
 #    returns 1 for No|N|n
 #---------------------------------------------------------------------------------------------
 
-function yesno {
+yesno() {
 
 	read -p "$@" -n 1 -r
 	echo
@@ -125,16 +162,8 @@ function yesno {
 
 
 # install AWS CLI
-yesno "Do you want to install the AWS CLI (y|n)? " && installAWSCLI || echo "Skipping AWS CLI install."
+yesno "Do you want to download and install the AWS CLI (y|n)? " && installAWSCLI || echo "Skipping AWS CLI install."
 
-# 
-# echo "Do you want to install the AWS CLI (y|n)?"; read ans
-# if [[ "$ans" == "y" || "$ans" == "Y" ]]
-# then
-# 	installAWSCLI
-# else
-# 	echo "Skipping AWS CLI install"
-# fi
 
 #need to assume we installed it, will need to update if versions change
 echo "Adding AWS CLI to PATH environment variable"
@@ -143,26 +172,22 @@ export PATH=$PATH:$BIN
 # configure AWS CLI
 yesno "Do you want to configure the AWS CLI (y|n)? " && configureAWSCLI || echo "Skipping AWS CLI configuration."
 
-# echo "Do you want to configure the AWS CLI (y|n)?"; read ans
-# if [[ "$ans" == "y" || "$ans" == "Y" ]]
-# then
-# 	configureAWSCLI
-# else
-# 	echo "Skipping AWS CLI configuration"
-# fi
-
-# get all publice/private IPS for all ec2 instances in AWS and store in a temp file
-# this file will be used multiple times and removed at the end
-echo "Retrieving public IPs for all AWS ec2 instances "
-aws ec2 describe-instances|grep INSTANCES > $AWS_DESCRIBE_INSTANCES
-
 
 ### get Satellite Location name/ID
 echo
 echo "Enter your Satellite Location name or ID: "
 read location
-
 export location
+
+
+# get all publice/private IPS for all ec2 instances in AWS and store in a temp file
+# this file will be used multiple times and removed at the end
+# make sure we only get ones associated with the location we care about
+echo
+echo "Retrieving public IPs for all AWS ec2 instances "
+aws ec2 describe-instances|grep INSTANCES |grep $location > $AWS_DESCRIBE_INSTANCES
+
+
 
 # get private IPs for control plane
 locInfo=$(ibmcloud sat location dns ls --location $location -q|head -2 | tail -1)
@@ -170,81 +195,49 @@ set -a $locInfo
 export locDNSName=$1
 export locPrivateIPS=$2
 
+echo
 echo "found locDNSName = $locDNSName and locPrivateIPs = $locPrivateIPS"
-
-
-#### old way
-# get the 3 IPS....
-#IFS=","
-#set -a $locPrivateIPS
-#export IP1=$1
-#export IP2=$2
-#export IP3=$3
-#IFS=${origIFS}
-#####
-
-
-
+echo
 
 # get public IPs for control plane from AWS
 
 echo "finding public IPs for all the private IPs for control plane"
+echo
 
-#stick local Private IPS in args
+#stick local Private IPS in args, this should handle any number of IPs
 IFS=","
 set -- $locPrivateIPS
 IFS=${origIFS}
 
 export publicControlPlaneIPS=""
-echo commands = $@
+# echo commands = $@
 for IP in "$@"
 do
-   echo "looking for $IP"
-   x=`awk {for(i=1;i<=NF;i++) {if(\$i==\"$IP\")print \$(i+1)}} $AWS_DESCRIBE_INSTANCES `
-   echo x = $x
-   publicControlPlaneIPS="$publicControlPlateIPS $x"
-   echo $publicControlPlaneIPS
+	# echo "looking for $IP"
+	# echo
+	## x=`awk {for(i=1;i<=NF;i++) {if(\$i==\"$IP\")print \$(i+1)}} $AWS_DESCRIBE_INSTANCES `
+	
+	x=$(awk "{for(i=1;i<NF;i++) {if(\$i==\"$IP\")print \$(i+1)}}" $AWS_DESCRIBE_INSTANCES)
+	
+	#echo x = $x
+	publicControlPlaneIPS="$publicControlPlaneIPS $x"
+	#echo $publicControlPlaneIPS
 done
-echo $publicControlPlaneIPS
-exit
+echo publicControlPlaneIPS = $publicControlPlaneIPS
 
-
-# PublicIPs=$(aws ec2 describe-instances |grep INSTANCES | awk "{for(i=1;i<=NF;i++) {if(\$i==\"$IP1\")print \$(i+1); if(\$i==\"$IP2\") print \$(i+1); if(\$i==\"$IP3\") print \$(i+1)}}")
-
-
-# get all the public IPs for control plane from temp file
-
-
-echo PublicIPs = $PublicIPs
-set -a $PublicIPs
-
-export PIP1=$1
-export PIP2=$2
-export PIP3=$3
-
-echo "PIP1 = $PIP1"
-echo "PIP2 = $PIP2"
-echo "PIP3 = $PIP3"
+# set -- $publicControlPlaneIPS
 
 # add public IPs to DNS for Satellite Control Plane
-yesno "Do you want to add public IPS to DNS for control plane (y|n)? " && addPublicIPs4CP || echo "Skipping add of Public IPs to DNS for control plane."
+yesno "Do you want to add public IPS to DNS for control plane (y|n)? " && addPublicIPs4CP $publicControlPlaneIPS || echo "Skipping add of Public IPs to DNS for control plane."
 
-# echo "Do you want to add public IPS to DNS for control plane (y|n)?"; read ans
-# if [[ "$ans" == "y" || "$ans" == "Y" ]]
-# then
-# 	addPublicIPs4CP
-# else
-# 	echo "Skipping adding Public IPs to DNS for control plane."
-# fi
-
-
-
-
+echo
 echo "Enter your OpenShift cluster name or ID: "
 read clusterName
 
 # getting cluster hostname
 
+echo
+echo "Retrieving nlb-dns information for $clusterName"
 
 clusterInfo=$(ibmcloud oc nlb-dns ls --cluster $clusterName -q|head -2 | tail -1)
 set -a $clusterInfo
@@ -254,49 +247,35 @@ clusterPrivateIPS=$2
 echo "found clusterHostname = $clusterHostname and clusterPrivateIPS = $clusterPrivateIPS"
 
 
+
 IFS=","
-set -a $clusterPrivateIPS
-export clusterIP1=$1
-export clusterIP2=$2
-export clusterIP3=$3
-echo "cluster private IPS = $1 $2 $3 "
+set -- $clusterPrivateIPS
 IFS=${origIFS}
 
-#aws ec2 describe-instances |grep INSTANCES | awk "{for(i=1;i<=NF;i++) {if(\$i==\"$clusterIP1\")print \$i \" \" \$(i+1); if(\$i==\"$clusterIP2\") print \$i \" \" \$(i+1); if(\$i==\"$clusterIP3\") print \$i \" \" \$(i+1)}}"
-clusterPublicIPs=$(aws ec2 describe-instances |grep INSTANCES | awk "{for(i=1;i<=NF;i++) {if(\$i==\"$clusterIP1\")print \$(i+1); if(\$i==\"$clusterIP2\") print \$(i+1); if(\$i==\"$clusterIP3\") print \$(i+1)}}")
-
-
-echo "Cluster PublicIPs = $clusterPublicIPs"
-set -a $clusterPublicIPs
-
-export clusterPIP1=$1
-export clusterPIP2=$2
-export clusterPIP3=$3
-
-echo "cluster PIP1 = $clusterPIP1"
-echo "cluster PIP2 = $clusterPIP2"
-echo "cluster PIP3 = $clusterPIP3"
+export publicWorkerNodeIPS=""
+# echo commands = $@
+for IP in "$@"
+do
+	x=$(awk "{for(i=1;i<NF;i++) {if(\$i==\"$IP\")print \$(i+1)}}" $AWS_DESCRIBE_INSTANCES)
+	#echo x = $x
+	publicWorkerNodeIPS="$publicWorkerNodeIPS $x"
+	#echo $publicControlPlaneIPS
+done
+echo publicWorkerNodeIPS = $publicWorkerNodeIPS
+echo
 
 # add public IPs for worker nodes to OpenShift Cluster
-yesno "Do you want to add public IPS to LB for worker nodes (y|n)? " && addPublicIPs4Workers || echo "Skipping add of worker nodes IPS to LB."
+yesno "Do you want to add public IPS to LB for worker nodes (y|n)? " && addPublicIPs4Workers $publicWorkerNodeIPS || echo "Skipping add of worker nodes IPS to LB."
 
-
-# echo "Do you want to add public IPS to LB for worker nodes (y|n)?"; read ans
-# if [[ "$ans" == "y" || "$ans" == "Y" ]]
-# then
-# 	addPublicIPs4Workers
-# else
-# 	echo "Skipping adding worker nodes IPS to LB"
-# fi
-
+IFS=","
+set -- $clusterPrivateIPS
+IFS=${origIFS}
+echo
 # configure remove Private IPs for worker nodes
-yesno "Do you want to remove private IPs to LB for worker nodes (y|n)? " && removePrivateIPs4Workers || echo "Skipping removing private IPs of worker nodes IPS to LB."
+yesno "Do you want to remove private IPs to LB for worker nodes (y|n)? " && removePrivateIPs4Workers $@ || echo "Skipping removal of private IPs of worker nodes IPS to LB."
 
 
-# echo "Do you want to remove private IPs to LB for worker nodes (y|n)?"; read ans
-# if [[ "$ans" == "y" || "$ans" == "Y" ]]
-# then
-# 	removePrivateIPs4Workers
-# else
-# 	echo "Skipping adding worker nodes IPS to LB"
-# fi
+
+echo
+# cleanup
+yesno "Do you want to remove temporary files (y|n)? " && cleanup || echo "Skipping removal of temporary files."
