@@ -274,10 +274,13 @@ read clusterName
 
 echo
 echo "Retrieving nlb-dns information for $clusterName"
+clusterInfo=$(ibmcloud oc nlb-dns ls --cluster $clusterName -q) || {
+        echo "ibmcloud oc nlb-dns failed.... aborting!"
+        exit
+}
+# just want the single line with cluster info
+clusterInfo=$(echo $clusterInfo |head -2 | tail -1 )
 
-clusterInfo=$(ibmcloud oc nlb-dns ls --cluster $clusterName -q|head -2 | tail -1 ) || {
-	echo "ibmcloud oc nlb-dns failed.... aborting!"
-	exit}
 set -a $clusterInfo
 clusterHostname=$1
 clusterPrivateIPS=$2
