@@ -1,0 +1,25 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+    name: nginx-hello-world
+spec:
+  runPolicy: Serial
+  source:
+    dockerfile: |
+      FROM centos:7
+      RUN yum install -y epel-release && \
+          yum install -y nginx
+
+      COPY index.html /usr/share/nginx/html
+      COPY nginx.conf /etc/nginx/nginx.conf
+
+      CMD /usr/sbin/nginx -g 'daemon off;'
+
+  strategy:
+    type: Docker
+    dockerStrategy:
+      noCache: false
+  output:
+    to:
+      kind: ImageStreamTag
+      name: "nginx-hello-world:latest"
