@@ -1,4 +1,4 @@
-# Deploying and managing an OpenShift Application
+# Deploying and managing an OpenShift application
 
 ## 01 Getting Started
 
