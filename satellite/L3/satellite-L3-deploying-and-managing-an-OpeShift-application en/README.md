@@ -28,7 +28,7 @@
 
   [04.01 Update the development and production frontends](04.01%20Update%the%20development%20and%20production%20frontends.md)
   
-  [04.02 Peform a rollback](04.02%20Peform%20a%20rollback.md)
+  [04.02 Perform a rollback](04.02%20Perform%20a%20rollback.md)
   
 ## 05 Summary
 
