@@ -1,0 +1,8 @@
+{
+    "title": "IBM Cloud Satellite - 3",
+    "service": "satellite",
+    "badgeId": "",
+    "tabs": {
+      "terminal": false
+    }
+  }
