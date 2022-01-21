@@ -188,10 +188,8 @@ export USERID=$1
 export IBMUSERID=$2
 
 # for testing
-# andrew@jones-tx.com
-# IBMid-2700039NFT
-export USERID=andrew@jones-tx.com
-export IBMUSERID=IBMid-2700039NFT
+#export USERID=
+#export IBMUSERID=
 
 ####
 #
